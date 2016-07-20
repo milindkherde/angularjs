@@ -1,0 +1,3 @@
+ The ng-include directive creates a new scope.
+
+In both the points of the example, we see that we can use our AngularJS data binding normally, but we need to pay attention to the scope. Since the ng-include directive creates a new scope, we must refer to the $parent scope if we want to access the inputVar variable. 

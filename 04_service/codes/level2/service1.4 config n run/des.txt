@@ -1,0 +1,9 @@
+A module gives us a config and a run function.
+
+The config function is useful to configure providers before they're actually created. In the example, we register PersonManager as a provider (with the personManager name). The object returned by the PersonManager function contains the $get method to create a provider instance and a setFullNameSeparator method. The latter is useful to configure the provider instance before it actually gets created and it sets the fullNameSeparator that will be used in the getPersonFullName function.
+
+It's important to note that the config function can accept some providers as parameters through Dependency Injection, but the name of the function arguments must be written with the Provider suffix (in the example we write personManagerProvider as argument of the config function because we want the personManager provider injected).
+
+The run function could be useful to perform any kind of initialization after the objects instances registered in the module have already been created.
+
+We can have multiple config and run functions in the same module.

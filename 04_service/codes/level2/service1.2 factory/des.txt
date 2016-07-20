@@ -1,0 +1,5 @@
+A possible way of registering an object creation recipe in a module is given by its factory method.
+
+A factory is basically a function that returns an object representing the recipe. With this solution we could have some variables private to the factory and some other logic not directly visible from the object instance interface.
+
+We can take advantage of Dependency Injection also with a factory like we see in the example, where we get the object instance named person that we've registered as a value in the module.

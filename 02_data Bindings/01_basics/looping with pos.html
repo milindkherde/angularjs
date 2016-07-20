@@ -1,0 +1,36 @@
+<html>
+<head>
+ <title></title>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+ <script>
+ var app = angular.module("app", []);
+ 
+ app.controller("ctrl", function ($scope) {
+ $scope.friends = [{ name: 'shailendra', gender: 'boy' },
+ { name: 'kiran', gender: 'girl' },
+ { name: 'deepak', gender: 'boy' },
+ { name: 'pooja', gender: 'girl' }];
+ });
+ </script>
+</head>
+<body ng-app="app">
+ <div ng-controller="ctrl">
+ <ul class="example-animate-container">
+ <li ng-repeat="friend in friends">
+ <div>
+ [{{$index}}] {{friend.name}} is a {{friend.gender}}.
+  <span ng-if="$first">
+ <strong>(first element found)</strong>
+ </span>
+ <span ng-if="$middle">
+ <strong>(middle element found)</strong>
+ </span>
+ <span ng-if="$last">
+ <strong>(last element found)</strong>
+ </span>
+ </div>
+ </li>
+ </ul>
+ </div>
+</body>
+</html>

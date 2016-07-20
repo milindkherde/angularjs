@@ -1,0 +1,7 @@
+If we want to register a simple recipe to create object instances with a constructor function and that might accept other object instances as input, then we could use the service method of a module.
+
+As we can see in the example, we define a PersonManager object recipe by writing the constructor function and adding other functions to the prototype. The constructor accepts a person object instance.
+
+We register a person value in the module and that's exactly what will be passed to the PersonManager's constructor because that argument has exactly the same name as the registered value. We just need to use the module's service method to register the PersonManager object recipe and the person value will be automatically passed to its constructor by Dependency Injection.
+
+We can have an instance of PersonManager inside our controller again thanks to the Dependency Injection by writing personManager (the name we've used to register the service) in the controller creation function of mainController and we can have the value instance person as well if we need it.

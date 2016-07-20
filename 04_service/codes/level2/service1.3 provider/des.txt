@@ -1,0 +1,5 @@
+The most flexible way of registering an object creation recipe in an AngularJS module is given by the provider method.
+
+A provider recipe is a function that returns an object containing a special function named $get. It's the $get function that returns the object instance and can have arguments useful to obtain other object instances through Dependency Injection (in the example, the $get function obtains the person value).
+
+We said that a provider is the most flexible way of defining an object creation recipe because the $get function is inside an object that could contain other methods useful to configure the provider before an instance is actually created. You can learn more about this by taking a look at the example about the module's configuration and run phases.
